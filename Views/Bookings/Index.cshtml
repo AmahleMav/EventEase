@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Bookings";
+}
+
+<h2>Bookings</h2>
+<a class="btn btn-primary" asp-action="Create">Add New Booking</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Event</th>
+            <th>Venue</th>
+            <th>Booking Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var booking in Model)
+        {
+            <tr>
+                <td>@booking.Event.EventName</td>
+                <td>@booking.Venue.VenueName</td>
+                <td>@booking.BookingDate.ToShortDateString()</td>
+                <td>
+                    <a class="btn btn-warning" asp-action="Edit" asp-route-id="@booking.BookingID">Edit</a>
+                    <a class="btn btn-danger" asp-action="Delete" asp-route-id="@booking.BookingID">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
