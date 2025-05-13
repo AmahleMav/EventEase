@@ -15,6 +15,8 @@ namespace EventEase
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(connectionString));
 
+            builder.Services.AddSingleton<AzureBlobService>();
+
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 

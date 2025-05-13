@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace EventEase.Models
 {
@@ -23,7 +24,9 @@ namespace EventEase.Models
         [Url]
         public string ImageURL { get; set; } = "https://via.placeholder.com/150";
 
-        
+        [NotMapped]
+        public IFormFile? ImageFile { get; set; }
+
         public virtual ICollection<Event> Events { get; set; } = new List<Event>();
 
         

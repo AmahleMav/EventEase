@@ -29,9 +29,11 @@ namespace EventEase.Models
 
         [Required]
         [Url]
-        public string ImageURL { get; set; } = "https://via.placeholder.com/150"; 
+        public string ImageURL { get; set; } = "https://via.placeholder.com/150";
 
-        
+        [NotMapped]
+        public IFormFile? ImageFile { get; set; }
+
         public virtual ICollection<Booking> Bookings { get; set; } = new List<Booking>();
     }
 }

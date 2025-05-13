@@ -42,16 +42,16 @@ namespace EventEase.Data
 
             // Seed Data for Venues
             modelBuilder.Entity<Venue>().HasData(
-                new Venue { VenueID = 1, VenueName = "Botanical Gardens", Location = "Berea", Capacity = 150, ImageURL = "https://via.placeholder.com/150" },
-                new Venue { VenueID = 2, VenueName = "Durban ICC", Location = "Durban", Capacity = 2000, ImageURL = "https://via.placeholder.com/150" },
-                new Venue { VenueID = 3, VenueName = "Playhouse Theater", Location = "Durban Central", Capacity = 1000, ImageURL = "https://via.placeholder.com/150" }
+                new Venue { VenueID = 1, VenueName = "Botanical Gardens", Location = "Berea", Capacity = 150, ImageURL = "https://storageeventease.blob.core.windows.net/eventeaseimages/Durban%20Botanical%20Gardens.jpg" },
+                new Venue { VenueID = 2, VenueName = "Durban ICC", Location = "Durban", Capacity = 2000, ImageURL = "https://storageeventease.blob.core.windows.net/eventeaseimages/Durban%20ICC.jpg" },
+                new Venue { VenueID = 3, VenueName = "Playhouse Theater", Location = "Durban Central", Capacity = 1000, ImageURL = "https://storageeventease.blob.core.windows.net/eventeaseimages/Playhouse%20Theatre.jpeg" }
             );
 
             //Seed Data for Events
             modelBuilder.Entity<Event>().HasData(
-                new Event { EventID = 1, EventName = "Garden of Love Wedding Ceremony", EventDate = new DateTime(2025, 6, 15), Description = "Surrounded by blooming flowers and a breathtaking scenery what better way to celebrate Love.", VenueID = 1, ImageURL = "https://example.com/techconf.jpg" },
-                new Event { EventID = 2, EventName = "Durban IT Expo 2025", EventDate = new DateTime(2025, 7, 22), Description = "A look into the future of technology as we bring together tech enthusiasts under one roof.", VenueID = 2, ImageURL = "https://example.com/weddingexpo.jpg" },
-                new Event { EventID = 3, EventName = "Sjava One Man Show - Live", EventDate = new DateTime(2025, 8, 10), Description = "Experience an unforgetable night with the King of South African Afropop/Soul Sjava, as he takes centre stage.", VenueID = 3, ImageURL = "https://example.com/musicfest.jpg" }
+                new Event { EventID = 1, EventName = "Garden of Love Wedding Ceremony", EventDate = new DateTime(2025, 6, 15), Description = "Surrounded by blooming flowers and a breathtaking scenery what better way to celebrate Love.", VenueID = 1, ImageURL = "https://storageeventease.blob.core.windows.net/eventeaseimages/Garden%20of%20love.jpg" },
+                new Event { EventID = 2, EventName = "Durban IT Expo 2025", EventDate = new DateTime(2025, 7, 22), Description = "A look into the future of technology as we bring together tech enthusiasts under one roof.", VenueID = 2, ImageURL = "https://storageeventease.blob.core.windows.net/eventeaseimages/IT%20Expo%202025.png" },
+                new Event { EventID = 3, EventName = "Sjava One Man Show - Live", EventDate = new DateTime(2025, 8, 10), Description = "Experience an unforgetable night with the King of South African Afropop/Soul Sjava, as he takes centre stage.", VenueID = 3, ImageURL = "https://storageeventease.blob.core.windows.net/eventeaseimages/Sjava%20-%20One%20Man%20Show.jpg" }
             );
 
             //Seed Data for Bookings

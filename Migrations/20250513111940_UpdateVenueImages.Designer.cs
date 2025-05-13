@@ -4,6 +4,7 @@ using EventEase.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EventEase.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250513111940_UpdateVenueImages")]
+    partial class UpdateVenueImages
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -112,7 +115,7 @@ namespace EventEase.Migrations
                             Description = "Surrounded by blooming flowers and a breathtaking scenery what better way to celebrate Love.",
                             EventDate = new DateTime(2025, 6, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             EventName = "Garden of Love Wedding Ceremony",
-                            ImageURL = "https://storageeventease.blob.core.windows.net/eventeaseimages/Garden%20of%20love.jpg",
+                            ImageURL = "https://example.com/techconf.jpg",
                             VenueID = 1
                         },
                         new
@@ -121,7 +124,7 @@ namespace EventEase.Migrations
                             Description = "A look into the future of technology as we bring together tech enthusiasts under one roof.",
                             EventDate = new DateTime(2025, 7, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             EventName = "Durban IT Expo 2025",
-                            ImageURL = "https://storageeventease.blob.core.windows.net/eventeaseimages/IT%20Expo%202025.png",
+                            ImageURL = "https://example.com/weddingexpo.jpg",
                             VenueID = 2
                         },
                         new
@@ -130,7 +133,7 @@ namespace EventEase.Migrations
                             Description = "Experience an unforgetable night with the King of South African Afropop/Soul Sjava, as he takes centre stage.",
                             EventDate = new DateTime(2025, 8, 10, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             EventName = "Sjava One Man Show - Live",
-                            ImageURL = "https://storageeventease.blob.core.windows.net/eventeaseimages/Sjava%20-%20One%20Man%20Show.jpg",
+                            ImageURL = "https://example.com/musicfest.jpg",
                             VenueID = 3
                         });
                 });
